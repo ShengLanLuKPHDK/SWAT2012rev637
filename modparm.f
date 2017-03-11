@@ -653,8 +653,9 @@
       character(len=17), dimension (300) :: pname
 !!    adding qtile to output.hru write 3/2/2010 gsm  increased heds(70) to heds(71)
 !!    increased hedr(42) to hedr(45) for output.rch gsm 10/17/2011
-      character(len=13) :: heds(78),hedb(22),hedr(46),hedrsv(41)
+!      character(len=13) :: heds(78),hedb(22),hedr(46),hedrsv(41)
 !!      character(len=13) :: heds(73),hedb(21),hedr(42),hedrsv(41)
+      character(len=13) :: heds(79),hedb(24),hedr(46),hedrsv(41)
       character(len=13) :: hedwtr(40)
 !     character(len=4) :: title(60), cpnm(250)
       character(len=4) :: title(60), cpnm(5000)
@@ -905,6 +906,12 @@
       ! tillage_factor: = 1.6 in 30 days after tillage practices occur; otherwise 1.0;
 !! By Zhang for C/N cycling
 
-
+!!S.Lu for PO4 leaching and transport to tile drains
+      integer :: itilep
+      real, dimension(:,:),allocatable :: tile_fr,tilep_ly
+      real, dimension(:,:),allocatable :: sol_solpcon,solp_leach
+      real, dimension (:), allocatable :: tileminp, sub_tilesolp
+      real :: k_langmuir, Qmax_beta
+!!S.Lu for PO4 leaching and transport to tile drains
 
       end module parm

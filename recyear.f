@@ -114,7 +114,11 @@
       varoute(20,ihout) = cmtl1yr(inum1,curyr)
       varoute(21,ihout) = cmtl2yr(inum1,curyr)
       varoute(22,ihout) = cmtl3yr(inum1,curyr)
-
+!point source
+       wshddayo(47) = wshddayo(47) + varoute(7,ihout)
+       wshddayo(48) = wshddayo(48) + varoute(2,ihout)/da_km*1e-3
+ !      write(1111,100) iyr, inum1, wshddayo(47)
+!100   format(i0,1x,i0,f14.7)
       !! Assumed equal distribution of sediment
       varoute(23,ihout) = sedyr(inum1,curyr) * 0.   ! sand
       varoute(24,ihout) = sedyr(inum1,curyr) * 1.   ! silt
