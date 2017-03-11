@@ -279,6 +279,10 @@
         pdvas(77) = hrumono(70,j)
 !!    lat q continuous
         pdvas(78) = hrumono(71,j)
+!!S.Lu for PO4 leaching and transpor to tile drains
+        pdvas(79) = hrumono(72,j)
+!        if(itilep == 1) call soilPoutm(days)
+!!S.Lu for PO4 leaching and transpor to tile drains
 
       if (itots > 0) then 
 	   ix = itots
@@ -331,8 +335,10 @@
       end do
 
       return
- 1000 format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,
-     *e10.5,1x,e10.5,8e10.3,2f10.3)
+! 1000 format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,
+!     *e10.5,1x,e10.5,8e10.3,2f10.3)
+ 1000 format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,1x,e10.5,66f10.3,1x,
+     *e10.5,1x,e10.5,8e10.3,2f10.3,e14.7)
  2000 format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,
      *e10.5,1x,e10.5,5e10.3,5f10.3,1x,i4)
  1001 format (a4,i7,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,

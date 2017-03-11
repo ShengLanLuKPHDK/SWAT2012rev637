@@ -345,6 +345,15 @@
       pdvas(30) = usle
       pdvas(31) = fertn
       pdvas(32) = fertp
+!Soil P budget
+!      pdvas(33) = fertsolp
+!      pdvas(34) = fertorgp
+!      pdvas(35) = plantp(j)
+!      pdvas(36) = yieldp
+      pdvas(33) = auton
+      pdvas(34) = autop
+      pdvas(35) = grazn
+      pdvas(36) = grazp
       pdvas(33) = auton
       pdvas(34) = autop
       pdvas(35) = grazn
@@ -402,7 +411,10 @@
 !    groundwater deep
       pdvas(77) = gw_qdeep(j)
       pdvas(78) = latq(j) - lpndloss - lwetloss
-
+!! S.Lu for PO4 leaching and transport to tile drains
+      pdvas(79) = tileminp(j) 
+      if(itilep == 1) call soilPout
+!! S.Lu for PO4 leaching and transport to tile drains
       call xmon 
           
       if (ipdvas(1) > 0) then
@@ -537,8 +549,10 @@
 
       return
 
-1000  format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,e10.5,1x,e10.5,8e10.3,2f10.3,1x,i4)
-1001  format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,e10.5,1x,e10.5,8e10.3,2f10.3)
+!1000  format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,e10.5,1x,e10.5,8e10.3,2f10.3,1x,i4)
+!1001  format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,e10.5,1x,e10.5,8e10.3,2f10.3)
+1000  format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,1x,e10.5,66f10.3,1x,e10.5,1x,e10.5,8e10.3,2f10.3,1x,i4)
+1001  format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,1x,e10.5,66f10.3,1x,e10.5,1x,e10.5,8e10.3,2f10.3,e14.7)
 9000  format(i4,i4,i2,i8,21(f16.3))
 9001  format(i4,i4,i8,48(f16.3))
       end

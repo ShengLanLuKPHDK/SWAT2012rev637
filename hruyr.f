@@ -257,6 +257,9 @@
         pdvas(77) = hruyro(70,j)
 !!    latq contribution
         pdvas(78) = hruyro(71,j)
+!!S.Lu for PO4 leaching and transpor to tile drains
+        pdvas(79) = hruyro(72,j)
+!!S.Lu for PO4 leaching and transpor to tile drains
 
         if (ipdvas(1) > 0) then
           do ii = 1, itots
@@ -304,8 +307,10 @@
 ! 1001 format (a4,i7,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,
 !     *e10.5,1x,e10.5,3e10.3,2f10.3,1x,i4)
 
- 1000 format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,
-     *e10.5,1x,e10.5,8e10.3,5f10.3)
+! 1000 format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,
+!     *e10.5,1x,e10.5,8e10.3,5f10.3)
+ 1000 format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,1x,e10.5,66f10.3,1x,
+     *e10.5,1x,e10.5,8e10.3,2f10.3,e14.7)
  2000 format (a4,i5,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,
      *e10.5,1x,e10.5,5e10.3,5f10.3,1x,i4)
  1001 format (a4,i7,1x,a5,a4,i5,1x,i4,1x,i4,e10.5,66f10.3,1x,
