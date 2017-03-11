@@ -90,7 +90,10 @@
         pdvab(20) = 0.0
         pdvab(21) = 0.0
         pdvab(22) = subaao(18,sb)   !!tile_no3
-
+!S.Lu for tile drain PO4 outputs
+        pdvab(23) = subaao(19,sb)
+        pdvab(24) = subaao(20,sb)
+!S.Lu for tile drain PO4 outputs
 
         if (ipdvab(1) > 0) then
           do ii = 1, itotb
@@ -106,5 +109,7 @@
 
       return
 !1000 format ('BIGSUB',i4,1x,i8,1x,f4.1,e10.5,21f10.3)
- 1000 format('BIGSUB',i4,1x,i8,1x,f4.1,e10.5,18f10.3,1x,e10.5,3e10.3,i6)
+! 1000 format ('BIGSUB',i4,1x,i8,1x,i4,e10.5,18f10.3,1x,e10.5,3e10.3,i6)
+ 1000 format ('BIGSUB',i4,1x,i8,1x,i4,1x,e10.5,18f14.7,1x,e10.5,3e10.3,
+     &2f14.7,i6)
       end 
