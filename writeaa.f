@@ -501,7 +501,10 @@
       sbactsedlp = sbactsedlp / yrs
       sbactlchp = sbactlchp / yrs
       sbactlchlp = sbactlchlp / yrs
-      
+
+        write(1111,100) wshdaao(47),wshdaao(48),wshdaao(49),
+     &wshdaao(50), wshdaao(51),wshdaao(43)
+100   format(6f14.7)     
 
 !! write average annual data
       if (iprint /= 1) then
