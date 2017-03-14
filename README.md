@@ -1,10 +1,6 @@
 # SWAT2012rev637
 Development of DrainP module based on the SWAT source code version 637.
 
-**Exclude the 'sub-subbasin.f' file for a successful build.
-
-The original SWAT code includes a file 'sub-subbasin.f', is like a copy of the 'subbasin.f', but I don't know what it does except for causing failure in build.
-
 #Changes in DrainP
 **Three files added
 
