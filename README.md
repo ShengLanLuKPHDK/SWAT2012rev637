@@ -6,7 +6,7 @@ Development of DrainP module based on the SWAT source code version 637.
 * Swtich on the DrainP module
 
 The DrainP module is switched on when the parameter *ItileP* is set to 1. The parameter was read in at the end of the *basens.bsn* file.
-Example of the last section of a basins.bsn fil:
+Example of the last section of a basins.bsn file:
 
 ```text
 Subdaily Erosion:
