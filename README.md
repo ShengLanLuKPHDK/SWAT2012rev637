@@ -3,7 +3,7 @@ Development of DrainP module based on the SWAT source code version 637.
 
 # How to use the DrainP module
 
-** Swtich on the DrainP module
+* Swtich on the DrainP module
 
 The DrainP module is switched on when the parameter *ItileP* is set to 1. The parameter was read in at the end of the *basens.bsn* file.
 Example of the last section of a basins.bsn fil:
@@ -34,7 +34,7 @@ Subdaily Erosion:
                1    | ITileP
 ```
 
-** Calibrating the DrainP module
+* Calibrating the DrainP module
 
 Two parameters K_langmuir and beta_Q_max are used to calibrate the soluble reactive phosphorus leaching. In this excutable, I read in these two patameters as two bacteria parameters in the basins.bsn file that are not used in my model, so the values can be calibrated with SWAT-CUP.
 Example of the two parameters:
@@ -49,14 +49,12 @@ Bacteria:
 ```
 
 # Changes in DrainP
-** Three files added
+* Three files added
 
 We added a file to calculate the P leaching through out the profile (solplch.f90), a file to calculate how much tile drain flow was contributed from each soil layer (tileqsplit.f90), and a file to print soil P budges and soil P contents for the whole soil profile (soilPout.f90).
 On top of that, many files were modified to include to new variables. In total 25 files were modified and 3 files were added.
 
-** To switch on the 
-
-** Additional edit not relevant to DrainP
+* Additional edit not relevant to DrainP
 
 I had some problems for point source files in our set up. When the starting year of point source file (eg 2000) are later than the simulation starting year (eg 1989), point source are not read properly by the model. I adjusted that in the readyr.f and recyear.f. These changes are not verified, so ignore them if they are not done properly.
 
